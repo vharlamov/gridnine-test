@@ -17,7 +17,7 @@ export function formatTime(data) {
 	const parsed = new Date(Date.parse(data))
 	let mins = parsed.getMinutes()
 
-	if (mins === 0 || mins === '0') mins = '00'
+	if (+mins < 10) mins = '0' + mins
 	const time = parsed.getHours() + ':' + mins
 	const date = parsed.getDate() + ' ' + months[parsed.getMonth()]
 	const day = days[parsed.getDay()]
@@ -33,7 +33,7 @@ export function duration(data) {
 	const hours = Math.floor(data / 60)
 	let mins = data % 60
 
-	if (mins === 0) mins = '00'
+	if (mins < 10) mins = '0' + mins.toString()
 
 	return `  ${hours.toString()} ч ${mins} мин`
 }
