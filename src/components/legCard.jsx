@@ -5,6 +5,11 @@ const LegCard = ({ leg }) => {
 	const segments = leg.segments
 	const segmentFirst = segments[0]
 	const segmentLast = segments[segments.length - 1]
+	// Далее прошу прощения за внезапные спреды — без них не работало.
+	// Поля нормально выводились в консоль до самого последнего уровня,
+	// но при обработке выскакивала ошибка "can't read property of indefined".
+	// Победил методом тыка через спред, в чём причина глюка — не знаю до сих пор.
+	// Из-за этого и мок через .js, а не напрямую из .json — искал причину.
 	const departureCity = { ...segmentFirst.departureCity }
 	const departureAirport = { ...segmentFirst.departureAirport }
 	const arrivalCity = { ...segmentLast.arrivalCity }
@@ -18,8 +23,6 @@ const LegCard = ({ leg }) => {
 		'2 пересадки',
 		'3 пересадки',
 	]
-
-	// const date = formatTime()
 
 	return (
 		<div className='leg-card'>

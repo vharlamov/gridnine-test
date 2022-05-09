@@ -8,6 +8,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+	display: flex;
+}
+
 .material-icons {
 	font-family: 'Material Icons';
 	font-weight: normal;
@@ -36,15 +40,19 @@ body {
 .container {
 	display: flex;
 	flex-direction: row;
+	margin: 0 auto;
 }
 
 .control {
 	padding: 20px;
 	background-color: #eee;
+	position: fixed;
+	height: 100rem;
 }
 
 .fligts-container {
 	padding: 20px;
+	margin-left: 316px;
 }
 
 .group-wrapper {
@@ -175,6 +183,13 @@ body {
 	padding: 5px;
 	z-index: 100;
 	background-color: white;
+}
+
+.flight-container {
+	max-width: 700px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .no-flights {

@@ -35,16 +35,14 @@ function App() {
 	}
 
 	return (
-		<>
-			<div className='container'>
-				<Control
-					onSubmit={handleSort}
-					carriers={carriersList}
-					transfers={transfersReady}
-				/>
-				<FlightsPanel flights={data} />
-			</div>
-		</>
+		<div className='container'>
+			<Control
+				onSubmit={handleSort}
+				carriers={carriersList}
+				transfers={transfersReady}
+			/>
+			<FlightsPanel flights={data} />
+		</div>
 	)
 }
 

@@ -1,5 +1,4 @@
 export default function sort(data, config) {
-	console.log(config)
 	data = config.carriers.length ? filterByCarriers(data, config.carriers) : data
 
 	data = config.transfers.length

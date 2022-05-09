@@ -14,23 +14,25 @@ const FlightList = ({ flights }) => {
 	}
 
 	return (
-		<div className='flight-list'>
-			{!flights.length ? (
-				<div className='no-flights'>
-					Нет полётов по вашему запросу, измените параметры поиска
-				</div>
-			) : (
-				<div>
-					{croppedFlights().map((fl, i) => (
-						<FlightCard flight={fl.flight} key={i} />
-					))}
-				</div>
-			)}
-			{flights.length >= cropNum ? (
-				<button className='control-button' onClick={handleAdd}>
-					Показать ещё
-				</button>
-			) : null}
+		<div className='flight-container'>
+			<div className='flight-list'>
+				{!flights.length ? (
+					<div className='no-flights'>
+						Нет полётов по вашему запросу, измените параметры поиска
+					</div>
+				) : (
+					<div>
+						{croppedFlights().map((fl, i) => (
+							<FlightCard flight={fl.flight} key={i} />
+						))}
+					</div>
+				)}
+				{flights.length > cropNum ? (
+					<button className='control-button' onClick={handleAdd}>
+						Показать ещё
+					</button>
+				) : null}
+			</div>
 		</div>
 	)
 }

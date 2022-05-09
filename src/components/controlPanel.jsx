@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Formik, Field, Form } from 'formik'
-// import { formatTime } from '../utilities/time'
 
 const Control = ({ onSubmit, transfers, carriers }) => {
 	const initialValues = {
@@ -11,9 +10,6 @@ const Control = ({ onSubmit, transfers, carriers }) => {
 		carriers: [],
 	}
 
-	const [configValues, setConfigValues] = useState(initialValues)
-	console.log('configValues', configValues)
-
 	const transferOpts = [
 		'Без пересадок',
 		'1 пересадка',
@@ -21,17 +17,10 @@ const Control = ({ onSubmit, transfers, carriers }) => {
 		'3 пересадки',
 	]
 
-	const handleReset = () => {
-		setConfigValues()
-		console.log('initialValues', initialValues)
-		// onSubmit(initialValues)
-	}
-
 	return (
 		<div className='control'>
-			<Formik initialValues={configValues} onSubmit={onSubmit}>
+			<Formik initialValues={initialValues} onSubmit={onSubmit}>
 				{({ values }) => {
-					console.log('values', values)
 					return (
 						<Form>
 							<div id='padio-group' className='label'>
@@ -54,8 +43,6 @@ const Control = ({ onSubmit, transfers, carriers }) => {
 									<Field type='radio' name='sort' value='time' />
 									По времени
 								</label>
-								{/* <div>Сортировка: {values.sort}</div>
-							<button type='submit'>Отправить</button> */}
 							</div>
 
 							<div id='check-group' className='label'>
@@ -104,10 +91,6 @@ const Control = ({ onSubmit, transfers, carriers }) => {
 										step={100}
 									/>
 								</label>
-								{/* <div>
-								От: {values.min}, до: {values.max}
-							</div>
-							<button type='submit'>Отправить</button> */}
 							</div>
 
 							<div id='check-group' className='label'>
@@ -124,20 +107,9 @@ const Control = ({ onSubmit, transfers, carriers }) => {
 										{c.caption}
 									</label>
 								))}
-
-								{/* <div>Перевозчики: {values.carriers.join(', ')}</div>
-							<button type='submit'>Отправить</button> */}
 							</div>
 							<button type='submit' className='control-button'>
 								Сортировать
-							</button>
-							<button
-								type='button'
-								// onClick={handleReset}
-								onClick={handleReset}
-								className='control-button orange'
-							>
-								Сбросить настройки
 							</button>
 						</Form>
 					)
