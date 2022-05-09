@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gridnine-test/static/css/main.f11c4465.css",
-    "main.js": "/gridnine-test/static/js/main.47811ff5.js",
+    "main.css": "/gridnine-test/static/css/main.b5659fd8.css",
+    "main.js": "/gridnine-test/static/js/main.077a471d.js",
     "static/js/787.9f42b58f.chunk.js": "/gridnine-test/static/js/787.9f42b58f.chunk.js",
     "index.html": "/gridnine-test/index.html",
-    "main.f11c4465.css.map": "/gridnine-test/static/css/main.f11c4465.css.map",
-    "main.47811ff5.js.map": "/gridnine-test/static/js/main.47811ff5.js.map",
+    "main.b5659fd8.css.map": "/gridnine-test/static/css/main.b5659fd8.css.map",
+    "main.077a471d.js.map": "/gridnine-test/static/js/main.077a471d.js.map",
     "787.9f42b58f.chunk.js.map": "/gridnine-test/static/js/787.9f42b58f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f11c4465.css",
-    "static/js/main.47811ff5.js"
+    "static/css/main.b5659fd8.css",
+    "static/js/main.077a471d.js"
   ]
 }
