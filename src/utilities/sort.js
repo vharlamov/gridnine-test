@@ -1,4 +1,4 @@
-export default function sort(data, config) {
+export function sort(data, config) {
 	data = config.carriers.length ? filterByCarriers(data, config.carriers) : data
 
 	data = config.transfers.length
@@ -37,7 +37,7 @@ function filterByPrice(data, { min, max }) {
 	return byPrice
 }
 
-function sortByPriceAndTime(data, method) {
+export function sortByPriceAndTime(data, method) {
 	const fn = (a, b) => {
 		switch (method) {
 			case 'asc':

@@ -18,7 +18,7 @@ const FlightList = ({ flights }) => {
 			<div className='flight-list'>
 				{!flights.length ? (
 					<div className='no-flights'>
-						Нет полётов по вашему запросу, измените параметры поиска
+						Нет полётов по вашему запросу, <br /> измените параметры поиска
 					</div>
 				) : (
 					<div>

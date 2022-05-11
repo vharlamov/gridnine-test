@@ -103,8 +103,14 @@ const Control = ({ onSubmit, transfers, carriers }) => {
 							>
 								{carriers.map((c) => (
 									<label key={c.uid}>
-										<Field type='checkbox' name='carriers' value={c.uid} />
-										{c.caption}
+										<div>
+											<Field type='checkbox' name='carriers' value={c.uid} />
+											{`${c.caption},`}
+										</div>
+										<div className='bold best-price'>
+											{' '}
+											{`от ${+c.bestPrice} руб.`}
+										</div>
 									</label>
 								))}
 							</div>
